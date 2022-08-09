@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './App.css';
 import Accordion from "./components/Accordion/Accordion";
 import {Rating} from "./components/Rating/Rating";
@@ -7,17 +7,20 @@ import {UncontrolledAccordion} from "./components/UncontrolledAccordion/Uncontro
 import {UncontrolledRating} from "./UncontrolledRating/UncontrolledRating";
 
 function App() {
+    let [ratingValue, setRatingValue] =useState(0)
+    let [accordionCollapsed, setAccordionCollapsed]=useState(false)
     console.log("App rendering")
     return (
         <div className="App">
             <PageTitle title = {"This is APP component"}/>
             <PageTitle title = {"Users"}/>
             Article 1
-            {/*<Rating value ={3}/>*/}
+            {/*<Rating value ={ratingValue} />*/}
             <UncontrolledAccordion titleValue ={"Menu"} />
             <UncontrolledAccordion titleValue ={"Users"} />
             Article 2
-            <UncontrolledRating />
+            <Accordion titleValue={"lalala"} collapsed={accordionCollapsed} setAccordionCollapsed={setAccordionCollapsed}/>
+            {/*<UncontrolledRating />*/}
             {/*<Rating value ={1}/>*/}
             {/*<Rating value ={2}/>*/}
             {/*<Rating value ={3}/>*/}
