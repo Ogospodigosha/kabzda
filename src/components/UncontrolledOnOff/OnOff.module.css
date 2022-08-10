@@ -1,0 +1,36 @@
+.onOffWrapper {
+    display: flex;
+}
+.on {
+    margin: 20px;
+    margin-right: 0px;
+    width: 100px;
+    height: 50px;
+    border: 5px solid black;
+    line-height: 45px;
+    text-align: center;
+
+}
+.off {
+    margin: 20px;
+    margin-left: 5px;
+    width: 100px;
+    height: 50px;
+    border: 5px solid black;
+    line-height: 45px;
+    text-align: center;
+}
+.circle {
+    margin: 20px;
+    width: 50px;
+    height: 50px;
+    border: 5px solid black;
+    border-radius: 50%;
+}
+
+.colorGreen {
+    background-color: green;
+}
+.colorRed {
+    background-color: red;
+}
