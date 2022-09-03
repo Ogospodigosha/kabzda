@@ -6,11 +6,22 @@ import {UncontrolledOnOff} from "./components/UncontrolledOnOff/UncontrolledOnOf
 import {UncontrolledAccordion} from "./components/UncontrolledAccordion/UncontrolledAccordion";
 import {UncontrolledRating} from "./UncontrolledRating/UncontrolledRating";
 import {OnOff} from "./components/OnOff/OnOff";
+import {Select} from "./components/Select/Select";
+import {MySelect} from "./components/MySelect";
 
 function App() {
     let [ratingValue, setRatingValue] =useState(0)
     let [accordionCollapsed, setAccordionCollapsed]=useState(false)
+    const [value, setValue] =useState(2)
     let [on, setOn] = useState(false)
+   let items =[
+       {title: "Gosha", value: 1},
+       {title: "Olga", value: 2},
+       {title: "John", value: 3}
+    ]
+    const callBack = ()=> {
+        alert("Some item was clicked")
+    }
     console.log("App rendering")
     return (
         <div className="App">
@@ -21,7 +32,8 @@ function App() {
             <UncontrolledAccordion titleValue ={"Menu"} />
             <UncontrolledAccordion titleValue ={"Users"} />
             Article 2
-            <Accordion titleValue={"lalala"} collapsed={accordionCollapsed} setAccordionCollapsed={setAccordionCollapsed}/>
+            <Select onChange={setValue} value={value} items={items}/>
+            <Accordion titleValue={"lalala"} collapsed={accordionCollapsed} setAccordionCollapsed={setAccordionCollapsed} items={items} onClick={callBack}/>
             <UncontrolledRating />
             <Rating  value={ratingValue} onClick={setRatingValue}/>
             {/*<Rating value ={2}/>*/}
@@ -31,6 +43,7 @@ function App() {
             <UncontrolledOnOff />
             <UncontrolledOnOff/>
             <OnOff onClick={setOn} value={on}/>
+            {/*<MySelect items ={items}/>*/}
         </div>
     );
 }
