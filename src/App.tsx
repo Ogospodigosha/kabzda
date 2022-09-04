@@ -32,7 +32,6 @@ function App() {
             <UncontrolledAccordion titleValue ={"Menu"} />
             <UncontrolledAccordion titleValue ={"Users"} />
             Article 2
-            <Select onChange={setValue} value={value} items={items}/>
             <Accordion titleValue={"lalala"} collapsed={accordionCollapsed} setAccordionCollapsed={setAccordionCollapsed} items={items} onClick={callBack}/>
             <UncontrolledRating />
             <Rating  value={ratingValue} onClick={setRatingValue}/>
@@ -44,6 +43,7 @@ function App() {
             <UncontrolledOnOff/>
             <OnOff onClick={setOn} value={on}/>
             {/*<MySelect items ={items}/>*/}
+            <Select onChange={setValue} value={value} items={items}/>
         </div>
     );
 }
