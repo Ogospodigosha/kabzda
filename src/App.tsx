@@ -8,6 +8,7 @@ import {UncontrolledRating} from "./UncontrolledRating/UncontrolledRating";
 import {OnOff} from "./components/OnOff/OnOff";
 import {Select} from "./components/Select/Select";
 import {MySelect} from "./components/MySelect";
+import {Timer} from "./components/Timer";
 
 function App() {
     let [ratingValue, setRatingValue] =useState(0)
@@ -25,6 +26,7 @@ function App() {
     console.log("App rendering")
     return (
         <div className="App">
+            <Timer/>
             <PageTitle title = {"This is APP component"}/>
             <PageTitle title = {"Users"}/>
             Article 1
